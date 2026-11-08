@@ -1,0 +1,398 @@
+.contactModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contactModalContent {
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  width: 95%;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: visible;
+  padding: 30px;
+  gap: 30px;
+}
+
+@media (min-width: 900px) {
+  .contactModalContent {
+    flex-direction: row;
+    padding: 30px;
+    gap: 30px;
+  }
+}
+
+.contactModalClose {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 36px;
+  height: 36px;
+  background-color: #0d2165;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contactModalClose:hover {
+  transform: scale(1.1);
+  background-color: #e3000f;
+}
+
+.contactModalClose svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.contactModalLeft {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactModalTitleLight {
+  font-size: 28px;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.contactModalTitleBold {
+  font-size: 38px;
+  color: #0d2165;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contactModalDesc {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  max-width: 95%;
+}
+
+.contactModalActionBtns {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.btnWhatsapp {
+  background-color: #0d2165;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btnWhatsapp:hover {
+  background-color: #1a3c9e;
+  transform: translateY(-2px);
+}
+
+.whatsappIcon {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.btnDownloadPresentation {
+  background-color: white;
+  color: #0d2165;
+  border: 1px solid #0d2165;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btnDownloadPresentation:hover {
+  background-color: #0d2165;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contactModalInfoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .contactModalInfoGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+  }
+}
+
+.contactModalInfoItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.infoIcon {
+  width: 14px;
+  height: 14px;
+  fill: #0d2165;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.blueLabel {
+  color: #0d2165;
+  font-weight: 700;
+}
+
+.contactModalRight {
+  background-color: #eaf5ce;
+  padding: 30px;
+  flex: 1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactModalRightTitle {
+  font-size: 26px;
+  color: #0d2165;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.contactModalRightDesc {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.contactModalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactModalInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #99a87d;
+  padding: 10px 0;
+  font-size: 13px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contactModalInput::placeholder {
+  color: #667550;
+}
+
+.contactModalInput:focus {
+  border-bottom-color: #0d2165;
+}
+
+.contactModalTextarea {
+  background: transparent;
+  border: 1px solid #99a87d;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+  color: #333;
+  outline: none;
+  min-height: 90px;
+  resize: vertical;
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.contactModalTextarea::placeholder {
+  color: #667550;
+}
+
+.contactModalTextarea:focus {
+  border-color: #0d2165;
+}
+
+.contactModalSubmitBtn {
+  background-color: #0d2165;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 30px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.contactModalSubmitBtn:hover {
+  background-color: #1a3c9e;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(13, 33, 101, 0.3);
+}
+
+/* ========== MOBILE RESPONSIVE FIX ========== */
+@media (max-width: 768px) {
+  .contactModalOverlay {
+    padding: 0;
+    align-items: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contactModalContent {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 20px 18px 40px;
+    gap: 25px;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .contactModalClose {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    z-index: 10001;
+  }
+
+  .contactModalLeft {
+    flex: none;
+    width: 100%;
+  }
+
+  .contactModalTitleLight {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .contactModalTitleBold {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .contactModalDesc {
+    font-size: 12px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .contactModalDesc br {
+    display: none;
+  }
+
+  .contactModalActionBtns {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .btnWhatsapp,
+  .btnDownloadPresentation {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .contactModalInfoGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contactModalInfoItem {
+    font-size: 11px;
+  }
+
+  .contactModalInfoItem br {
+    display: none;
+  }
+
+  .contactModalRight {
+    flex: none;
+    width: 100%;
+    padding: 25px 18px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  .contactModalRightTitle {
+    font-size: 22px;
+  }
+
+  .contactModalRightDesc {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .contactModalForm {
+    gap: 16px;
+  }
+
+  .contactModalInput {
+    font-size: 14px;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactModalTextarea {
+    font-size: 14px;
+    min-height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactModalSubmitBtn {
+    width: 100%;
+    align-self: stretch;
+    padding: 14px;
+    font-size: 13px;
+  }
+}

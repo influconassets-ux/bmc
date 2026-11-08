@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/bmc-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMC Electroplast Pvt. Ltd.</title>
+    <script type="module" crossorigin src="/assets/index-XcT-JTtk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-X11R6x6Q.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

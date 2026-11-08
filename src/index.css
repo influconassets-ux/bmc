@@ -1,0 +1,1061 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@700&family=Jost:wght@400;500;600&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.card {
+  border-radius: 0px !important;
+}
+
+.aboutVisionImg {
+  border-radius: 0px !important;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 80s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================
+   PRO UI/UX MOBILE RESPONSIVE OVERRIDES
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+  /* HIDE TOP BAR ON MOBILE/TABLET */
+  .topBar {
+    display: none !important;
+  }
+
+  /* PREMIUM MOBILE HEADER & NAV */
+  .navbar {
+    padding: 15px 20px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .navInner {
+    padding: 0 !important;
+  }
+
+  .logo {
+    height: 45px !important;
+  }
+
+  .badge {
+    display: none !important;
+  }
+
+  /* MOBILE MENU OVERLAY */
+  .navRight {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 85% !important;
+    max-width: 400px !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 80px 30px 40px !important;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1) !important;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 999 !important;
+  }
+
+  .navRight.mobileOpen {
+    right: 0 !important;
+  }
+
+  .navLinks {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .navLinkWrap {
+    width: 100% !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .navLink {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #102f83 !important;
+    display: block !important;
+  }
+
+  .navActiveLine {
+    display: none !important;
+  }
+
+  .btnGreen {
+    width: 100% !important;
+    margin-top: 30px !important;
+    padding: 16px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+  }
+
+  /* PREMIUM TYPOGRAPHY */
+  .h1 {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+    margin-bottom: 15px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .subtitle {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    min-height: auto !important;
+    margin-bottom: 30px !important;
+    opacity: 0.9 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .servicesHeroTitle,
+  .aboutHeroTitle,
+  .careersHeroTitle,
+  .mfgTitle,
+  .testTitle,
+  .aboutLegacyImgOverlayTitle {
+    font-size: 32px !important;
+    line-height: 1.3 !important;
+  }
+
+  .aboutLegacyTitle,
+  .aboutVisionTitle,
+  .aboutSparksTitle,
+  .aboutLeadTitle,
+  .servicesTitleCentered,
+  .prodGridTitle,
+  .upcomingTitle {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  .statVal {
+    font-size: 48px !important;
+  }
+
+  /* CONTAINER PADDING PRO */
+  body {
+    padding-top: 75px !important;
+  }
+
+  .heroInner,
+  .servicesHeroInner,
+  .aboutHeroInner,
+  .careersHeroInner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .heroLeft {
+    margin-top: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* CARDS & CONTAINERS */
+  .cardWrapper {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin-top: 50px !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 30px !important;
+    border-radius: 0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  /* STATS ROW-WISE ON MOBILE (PRO UI/UX) */
+  .statsInner {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+  .statBlock {
+    min-width: 0 !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .statVal {
+    font-size: 24px !important;
+  }
+  .statLabel {
+    font-size: 9px !important;
+    text-align: center;
+    line-height: 1.2 !important;
+    word-wrap: break-word !important;
+  }
+  .slash {
+    font-size: 24px !important;
+    margin: 0 2px !important;
+  }
+  
+  .floatBtn {
+    display: none !important;
+  }
+
+  /* GRIDS & ROWS -> PRO STACKING */
+  .aboutInner,
+  .founderTop,
+  .servicesGrid,
+  .mfgRow,
+  .testProdGrid,
+  .aboutLegacyInner,
+  .aboutVisionTop,
+  .aboutSparksGrid,
+  .aboutLeadItemWrap,
+  .aboutPartInner,
+  .facInner,
+  .spInner,
+  .paInner,
+  .consultInner,
+  .consultRight,
+  .careersWhyTop,
+  .careersWhyGrid,
+  .careersFormRow {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  /* RESET WIDTHS & MARGINS */
+  .aboutImgWrap,
+  .founderPhotoWrap,
+  .aboutLeadImgWrap,
+  .aboutPartSidebar,
+  .aboutPartContent,
+  .consultLeft,
+  .aboutVisionImgCol,
+  .mfgImgCol {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  /* PRO CARD STYLING */
+  .serviceCardNew,
+  .consultPageIntroCard,
+  .facCardLeft,
+  .facRight {
+    padding: 30px 25px !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+  }
+
+  .aboutLeadTextWrap {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 60px 25px 40px !important;
+    border-radius: 12px !important;
+  }
+
+  .aboutLeadHeaderLeft,
+  .aboutLeadHeaderRight {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -90px !important;
+    border-radius: 8px !important;
+    margin-bottom: -70px !important;
+  }
+
+  .productsGrid {
+    margin: 0 !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .productsArrowLeft,
+  .productsArrowRight,
+  .upcomingArrowLeft,
+  .upcomingArrowRight {
+    display: none !important;
+  }
+
+  /* IMAGES */
+  .mfgImg,
+  .awardsCard {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    border-radius: 12px !important;
+  }
+
+  .aboutImg,
+  .founderPhoto {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    border-radius: 0 !important;
+  }
+
+  .patentImg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    border-radius: 12px !important;
+  }
+
+  .aboutVisionImg {
+    max-height: 350px !important;
+  }
+
+  .facCardImg {
+    height: 220px !important;
+    border-radius: 12px 12px 0 0 !important;
+  }
+
+  /* CSS GRIDS */
+  .mfgGrid,
+  .testGridContainer,
+  .upcomingGrid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .aboutPartGrid,
+  .spSectorsGrid,
+  .spPartnersGrid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+  }
+
+  .facTestGrid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* PRO TIMELINE REDESIGN FOR MOBILE (Vertical Stack) */
+  .aboutTimeWrap {
+    padding-top: 40px !important;
+  }
+
+  .aboutTimeTrack {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    padding-left: 10px !important;
+  }
+
+  .aboutTimeAxis {
+    /* Convert horizontal dashed line to vertical left-aligned dashed line */
+    border-top: none !important;
+    border-left: 2px dashed #93a5c4 !important;
+    width: 2px !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 30px !important;
+    /* Position it behind the dots */
+  }
+
+  .aboutTimeNode {
+    min-height: auto !important;
+    margin-bottom: 60px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .aboutTimeYearWrap {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    /* Dot on left, Year on right */
+    align-items: center !important;
+    margin-bottom: 20px !important;
+    z-index: 3 !important;
+  }
+
+  .aboutTimeYear {
+    width: auto !important;
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+    text-align: left !important;
+  }
+
+  .aboutTimeDot {
+    margin-left: 14px !important;
+    /* Align exactly over the vertical axis */
+  }
+
+  .aboutTimeLine {
+    display: none !important;
+    /* Hide original vertical connector */
+  }
+
+  .aboutTimeContent {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    /* Icon and text side by side */
+    align-items: center !important;
+    margin-left: 45px !important;
+    /* Indent past the axis */
+    background: #f8f9fa !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    width: calc(100% - 45px) !important;
+  }
+
+  .aboutTimeIcon {
+    width: 45px !important;
+    height: 45px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .aboutTimeIcon svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .aboutTimeText {
+    margin-left: 15px !important;
+    margin-top: 0 !important;
+    width: 100% !important;
+    font-size: 13px !important;
+  }
+
+  .aboutTimeControls {
+    margin-top: 0 !important;
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+
+  /* HOME PAGE TIMELINE PRO REDESIGN (AUTO-SCROLL MARQUEE) */
+  .timelineTrackWrap {
+    padding-top: 20px !important;
+    overflow: hidden !important;
+    width: 100vw !important;
+    margin-left: -20px !important;
+    padding-bottom: 40px !important;
+    height: auto !important;
+  }
+
+  .timelineGrid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+  }
+
+  .timelineDashedLine {
+    border-top: 2px dashed #93a5c4 !important;
+    border-left: none !important;
+    width: 100vw !important;
+    height: 2px !important;
+    top: 60px !important;
+    left: 0 !important;
+  }
+
+  .timelineItem {
+    width: 320px !important;
+    flex-shrink: 0 !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+  }
+
+  .timelineAnchor {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+  }
+
+  .timelineDot {
+    position: absolute !important;
+    top: 25px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+  }
+
+  .timelineYear {
+    position: absolute !important;
+    top: -15px !important;
+    left: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+    font-size: 24px !important;
+  }
+
+  .timelineDropLine {
+    display: block !important;
+    position: absolute !important;
+    top: 35px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 2px !important;
+    height: 80px !important;
+    background: #102f83 !important;
+  }
+
+  .timelineBottomRow {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 110px !important;
+    margin-left: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: transparent !important;
+    padding: 0 15px !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+  }
+
+  .timelineCircle {
+    flex-shrink: 0 !important;
+    margin-bottom: 5px !important;
+  }
+
+  .timelineCircle img {
+    margin-bottom: 0 !important;
+  }
+
+  .timelineDesc {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 5px !important;
+    text-align: center !important;
+    width: 100% !important;
+    white-space: normal !important;
+  }
+
+  /* timelineSliderWrap shown for mobile arrows */
+
+  .timelineDivider {
+    display: none !important;
+  }
+
+  /* ABOUT LEGACY STATS MOBILE FIX */
+  .aboutLegacyStats {
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+    justify-content: center !important;
+    padding: 0 5px !important;
+  }
+  .aboutLegacyStatItem {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .aboutLegacyStatNumber {
+    font-size: 26px !important;
+  }
+  .aboutLegacyStatText {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    margin-top: 6px !important;
+    word-wrap: break-word !important;
+  }
+  .aboutLegacyStatDivider {
+    height: 35px !important;
+    margin: 0 5px !important;
+  }
+
+  /* ABOUT LEAD (FOUNDER) MOBILE FIX */
+  .aboutLeadContainer {
+    gap: 60px !important;
+  }
+  .aboutLeadItemWrap {
+    flex-direction: column !important;
+  }
+  .aboutLeadImgWrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+    transform: none !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  .aboutLeadImg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+  }
+  .aboutLeadTextWrap {
+    width: 100% !important;
+    margin: -40px 0 0 0 !important;
+    padding: 80px 25px 30px 25px !important;
+    box-sizing: border-box !important;
+  }
+  .aboutLeadHeaderLeft,
+  .aboutLeadHeaderRight {
+    position: absolute !important;
+    top: -25px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    min-width: auto !important;
+    text-align: center !important;
+    padding: 15px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+  }
+
+  /* WHAT WE DO MOBILE FIX */
+  .whatWeDoContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .whatWeDoRow5,
+  .whatWeDoRow4 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    margin-bottom: 0 !important;
+  }
+  .whatWeDoItem {
+    width: 100% !important;
+    min-width: 100% !important;
+    align-items: center !important;
+  }
+  .whatWeDoIcon {
+    margin-bottom: 15px !important;
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .whatWeDoText {
+    font-size: 14px !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+
+  /* ABOUT PARTNERS MOBILE FIX */
+  .aboutPartSection {
+    padding: 50px 0 !important;
+  }
+  .aboutPartInner {
+    flex-direction: column !important;
+    gap: 25px !important;
+    padding: 0 15px !important;
+  }
+  .aboutPartSidebar {
+    width: 100% !important;
+  }
+  .aboutPartMainTitle {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .aboutPartCatTitle {
+    text-align: center !important;
+  }
+  .aboutPartTabList {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .aboutPartContent {
+    width: 100% !important;
+    padding: 20px 15px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .aboutPartGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .aboutPartCard {
+    padding: 10px !important;
+    gap: 8px !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+  }
+  .aboutPartCardImgWrap {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .aboutPartCardText {
+    font-size: 9px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .aboutSectorsGrid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .aboutSectorItem {
+    padding: 14px 16px !important;
+  }
+
+  /* HIDE EXPERTISE IMAGE ON MOBILE */
+  .expertiseSection {
+    display: none !important;
+  }
+
+  /* HERO MOBILE OVERRIDES */
+  .heroInner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 120px 20px 80px !important; 
+    gap: 30px !important;
+  }
+  .heroLeft {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 350px !important;
+  }
+  .cardWrapper {
+    width: 90% !important;
+    max-width: 350px !important;
+    margin: 0 !important;
+    position: absolute !important;
+    bottom: -150px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10 !important;
+  }
+
+  /* SECTION PADDINGS */
+  .statsSection,
+  .about,
+  .founder,
+  .servicesSection,
+  .mfgLocationsSection,
+  .testGridSection,
+  .aboutLegacySection,
+  .aboutVisionSection,
+  .aboutSparksSection,
+  .aboutLeadSection,
+  .aboutPartSection,
+  .spSection,
+  .paSection,
+  .consultSection,
+  .productsSection,
+  .upcomingSection,
+  .careersFormSection,
+  .careersWhySection {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* STATS SPACING TO CLEAR ABSOLUTE HERO CARD */
+  /* Replaced by inline definition above */
+
+  /* PRO FOOTER MOBILE OVERRIDES */
+  /* FOOTER GET IN TOUCH - PRO MOBILE FIX */
+  .footerSection {
+    overflow-x: hidden !important;
+  }
+  .footerContainer {
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
+  .footerContactRow {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .footerContactLeft {
+    padding-top: 40px !important;
+    text-align: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .footerContactTitle {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  .footerContactDesc {
+    margin: 0 auto 25px !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    max-width: 100% !important;
+  }
+
+  .footerContactBtns {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .footerBtnWhatsapp,
+  .footerBtnDownload {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+  }
+
+  .footerFormCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    padding: 25px 18px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+  }
+
+  .footerFormTitle {
+    font-size: 22px !important;
+  }
+
+  .footerInput,
+  .footerTextarea {
+    font-size: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .footerSubmitBtn {
+    width: 100% !important;
+  }
+
+  .footerMainDivider {
+    margin-bottom: 40px !important;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    text-align: center !important;
+  }
+
+  .footerColBrand,
+  .footerCol,
+  .footerColLinks,
+  .footerColContact,
+  .footerColMaps {
+    align-items: center !important;
+  }
+
+  .footerLogos {
+    justify-content: center !important;
+  }
+
+  .footerBrandText {
+    text-align: center !important;
+  }
+
+  .footerSocials {
+    justify-content: center !important;
+  }
+
+  .footerList {
+    align-items: center !important;
+  }
+
+  .footerContactItem {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .footerColMaps iframe {
+    width: 100% !important;
+    height: 180px !important;
+  }
+
+  .footerAssoc {
+    margin-top: 40px !important;
+  }
+
+  .footerAssocLogos {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .footerAssocItem {
+    width: 100% !important;
+    max-width: 250px !important;
+    min-width: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .footerAssocImg {
+    width: 100% !important;
+    height: 70px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .footerAssocText {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    margin-top: 10px !important;
+    word-break: normal !important;
+    white-space: normal !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footerDesktopView {
+    display: none !important;
+  }
+  .footerMobileView {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+}
+
+.footerMobileView {
+  display: none;
+}
+
+
+
+/* HAMBURGER ICON */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 1001;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+.hamburger svg {
+  width: 28px;
+  height: 28px;
+  fill: #102f83;
+  transition: transform 0.3s ease;
+}
+
+/* MOBILE OVERLAY BACKDROP */
+.mobileBackdrop {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .mobileBackdrop.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 998;
+    animation: fadeIn 0.3s ease forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1201px) {
+  .timelineItemDuplicate {
+    display: none !important;
+  }
+}
